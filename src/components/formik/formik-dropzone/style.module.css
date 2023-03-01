@@ -1,0 +1,39 @@
+
+.container {
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 8px;
+  width: 100%;
+  background: lightyellow;
+  border: 1px solid grey;
+  position: relative;
+}
+
+.removeIconWrap {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.removeIconWrap:hover {
+  opacity: 1;
+}
+
+.removeIcon {
+  color: #a50044;
+}
+
+.containerActive {
+  border: 1px solid #a50044;
+}
+
+.image {
+  max-width: 200px !important;
+  max-height: 200px !important;
+}
+

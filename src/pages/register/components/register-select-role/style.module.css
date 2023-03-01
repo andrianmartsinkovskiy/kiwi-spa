@@ -1,0 +1,46 @@
+.wrap {
+    min-height: 90vh;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.person, .legal {
+    height: 500px;
+    width: 500px;
+    border-radius: 8px;
+    font-size: 70px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.person {
+    opacity: 0.3;
+    background-color: silver;
+    cursor: not-allowed;
+}
+
+.legal {
+    background-color: lightblue;
+    color: darkslategrey;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    .wrap {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 25px;
+    }
+
+    .person, .legal {
+        width: 250px;
+        height: 250px;
+        font-size: 24px;
+    }
+}

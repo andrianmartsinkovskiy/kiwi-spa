@@ -1,0 +1,15 @@
+.wrap {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: darkslategrey;
+}
+
+.active {
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.3;
+}
