@@ -1,6 +1,6 @@
 import React from 'react'
 import c from './style.module.css'
-import {useNavigate, useNavigation} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {APPRoutes} from "../../../const/app-routes";
 
 

@@ -70,7 +70,7 @@ const RegisterLegalEntity = ({returnToChooseHandler}) => {
 
           <div>
             <h4 className={c.title}>File</h4>
-            <FormikDropzone form={legalEntityForm} name="file" imagePreview="filePreview" height="200px" />
+            <FormikDropzone form={legalEntityForm} name="file" imagePreview="filePreview" />
           </div>
 
           <div>

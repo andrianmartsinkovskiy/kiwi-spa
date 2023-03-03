@@ -1,6 +1,6 @@
 
 .container {
-  height: 250px;
+  height: 200px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -35,5 +35,16 @@
 .image {
   max-width: 200px !important;
   max-height: 200px !important;
+}
+
+.activeFile {
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightyellow;
+  border: 1px solid grey;
+  border-radius: 8px;
 }
 

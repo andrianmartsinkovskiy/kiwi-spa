@@ -1,4 +1,4 @@
-import React, {useCallback, useState, useEffect} from "react";
+import React, {useCallback, useState} from "react";
 import {AiFillDelete} from "react-icons/ai";
 import {useDropzone} from "react-dropzone";
 import {toast} from "react-toastify";
@@ -38,9 +38,10 @@ export const FormikDropzone = ({form, name, imagePreview, height}) => {
     },
   });
 
-  const setFileNull = () => {
+  const setFileNull = (e) => {
     form.setFieldValue(imagePreview, null);
     form.setFieldValue(name, null);
+    e.stopPropagation();
   };
 
   if (isLoading) {
@@ -53,30 +54,29 @@ export const FormikDropzone = ({form, name, imagePreview, height}) => {
 
 
   return (
-    <div
-      {...getRootProps()}
-      className={containerClass}
-      style={{height: height && height}}
-    >
+    <>
       {
-         form.values[name] !== null ? (
-          <>
-            <span className={c.removeIconWrap} onClick={setFileNull}>
-              <AiFillDelete className={c.removeIcon} />
+        form.values[name] !== null ? (
+          <div className={c.activeFile}>
+             <span className={c.removeIconWrap} onClick={setFileNull}>
+              <AiFillDelete className={c.removeIcon}/>
             </span>
             <div>
               {form.values[name].name}
             </div>
-          </>
+          </div>
         ) : (
-          <>
+          <div
+            {...getRootProps()}
+            className={containerClass}
+          >
             <input {...getInputProps()} />
             <div>
               <DropzoneEmpty/>
             </div>
-          </>
+          </div>
         )
       }
-    </div>
-  );
-};
+    </>
+  )
+}
