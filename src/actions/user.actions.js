@@ -1,22 +1,5 @@
 import {axiosAuthorized} from "../axios";
 
-export const getUsersRequest = async (formData) => {
-  let users = null
-
-  try {
-    const data = await axiosAuthorized.get(
-      process.env.REACT_APP_API_URL
-      + 'api/user/getUsers'
-    )
-
-    users = data.data.users
-  } catch (error) {
-    console.warn(error)
-  }
-
-  return users
-}
-
 export const getUserDataRequest = async (id) => {
   let user = null
 
