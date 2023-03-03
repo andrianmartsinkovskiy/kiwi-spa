@@ -22,7 +22,6 @@ const HomePreview  = () => {
     setIsLoading(true)
     const {userId} = jwtDecode(token)
     const data = await getUserDataRequest(userId)
-    console.log(data, 'data')
     if (data) {
       setUserData(data)
       setIsLoading(false)
